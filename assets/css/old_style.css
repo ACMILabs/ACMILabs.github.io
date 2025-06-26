@@ -1,0 +1,289 @@
+/*************************
+* Global
+*************************/
+
+html {
+  font-size: 18px;
+}
+
+@media screen and (min-height: 680px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-height: 769px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+body {
+  color: #FFFFFF;
+  background-color: #000000;
+  font-family: 'Fakt';
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'PxGrotesk';
+  font-weight: 700;
+  margin: 0;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+/*************************
+* Page Content
+*************************/
+
+.page-content {
+  height: 100vh;
+}
+
+.page-content section {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.page-wrapper {
+  max-width: 1440px;
+  width: 40%;
+}
+
+@media screen and (max-width: 1024px) {
+  .page-wrapper {
+    width: 60%;
+  }
+}
+
+.page-wrapper--max-width-tablet {
+  max-width: 724px;
+}
+
+@media screen and (min-width: 426px) {
+  .page-wrapper--tablet-full-width {
+    width: 88%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .page-wrapper--mobile-full-width {
+    width: 88%;
+  }
+}
+
+/*************************
+* Navigation
+*************************/
+
+.navigation-section {
+  background-color: #000000;
+}
+
+.navigation {
+  padding: .5rem 0;
+}
+
+.navigation__acmi-logo {
+  display: block;
+  height: 1.2rem;
+  fill: #FFFFFF;
+  padding: 0 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .navigation__acmi-logo {
+    padding: 0;
+  }
+}
+
+/*************************
+* Content Section
+*************************/
+
+.content-section {
+  padding-top: 1rem;
+}
+
+/*************************
+* Headings
+*************************/
+
+.headings_heading-container {
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 1023px) {
+  .headings_heading-container {
+    max-width: 16rem;
+  }
+}
+
+.headings__heading {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+/*************************
+* Headings Links
+*************************/
+
+.headings-links {
+  padding: .5rem 0;
+}
+
+.headings-links__link {
+  padding: .5rem 0;
+}
+
+/*************************
+* Call To Actions
+*************************/
+
+.call-to-actions {
+  padding: .3rem 0;
+}
+
+.call-to-actions__card {
+  display: flex;
+  flex-flow: row nowrap;
+  padding-bottom: 2rem;
+}
+
+.call-to-actions__card-image-wrapper {
+  flex: 2;
+  min-height: 130px;
+}
+
+@media screen and (min-width: 1024px) {
+  .call-to-actions__card-image-wrapper {
+    flex: 3;
+    min-height: 160px;
+  }
+}
+
+.call-to-actions__card-image {
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 100%;
+}
+
+.call-to-actions__card-image--lens-background {
+  background-image: url('../images/lens.png');
+}
+
+.call-to-actions__card-image--gallery-background {
+  background-image: url('../images/gallery.png');
+}
+
+.call-to-actions__card-image--media-background {
+  background-image: url('../images/media.png');
+}
+
+.call-to-actions__card-text-wrapper {
+  flex: 4;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding-left: .775rem;
+}
+
+.call-to-actions__card-heading {
+  font-size: 1rem;
+}
+
+.call-to-actions__card-description {
+  font-size: .775rem;
+  line-height: 1.4rem;
+}
+
+@media screen and (max-height: 639px) {
+  .call-to-actions__card-description {
+    font-size: .6rem;
+    line-height: 1rem;
+  }
+
+  .call-to-actions__card-image-wrapper {
+    min-height: 110px;
+  }
+
+  .call-to-actions__card {
+    padding-bottom: 1.2rem;
+  }
+}
+
+.call-to-actions__coming-soon-text {
+  text-transform: uppercase;
+  font-size: .775rem;
+}
+
+/*************************
+* Socials Navigation
+*************************/
+
+.socials-navigation {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.socials-navigation__icon-wrapper {
+  padding: 0 .5rem;
+}
+
+.socials-navigation__icon {
+  width: 2rem;
+}
+
+@media screen and (max-height: 576px) {
+  .socials-navigation__icon {
+    width: 1.5rem;
+  }
+}
+
+/*************************
+* Button
+*************************/
+
+.link-button {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link-button:hover,
+.link-button:active,
+.link-button:visited,
+.link-button:link {
+  text-decoration: none;
+}
+
+.link-button__text {
+  color: #FFFFFF;
+  font-family: 'PxGrotesk';
+  font-weight: 700;
+  font-size: .775rem;
+  text-transform: uppercase;
+
+  border-bottom: 1px solid #FFFFFF;
+  padding-bottom: .0625rem;
+}
+
+.link-button__text:hover {
+  border-bottom-width: 2px;
+}
+
+.link-button__arrow {
+  position: relative;
+  top: .2rem;
+  height: .8rem;
+  fill: #FFFFFF;
+  transition: transform .15s cubic-bezier(.4,0,.2,1);
+}
+
+.link-button:hover .link-button__arrow {
+  transform: translateX(0.15rem);
+}
